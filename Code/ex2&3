@@ -1,0 +1,15 @@
+EXERCISE 2
+
+The code line I have used to resize the image and get a new one with a lower quality is the following,
+
+ffmpeg -i Lenna.png -vf scale=240:240 output_50x50.png
+
+EXERCISE 3
+b&w:
+
+ffmpeg -i Lenna.png -vf format=gray LennaBW.png
+
+compression:
+
+ffmpeg -i input.mp4 -qscale:v 2 output_%03d.jpg
+--> level 100 is the maximum level of compression
